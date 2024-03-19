@@ -13,5 +13,6 @@ RUN apt-get install -y build-essential python3-dev libffi-dev libjpeg-dev libtif
 RUN pip install --upgrade pip setuptools
 RUN pip install -r requirements.txt
 RUN pip install --no-binary :all: cffi
+WORKDIR /~/Airport_Management-System
 EXPOSE 8000
-ENTRYPOINT ["python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+CMD python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000
