@@ -4,7 +4,6 @@ LABEL engg="pratik"
 USER root
 RUN apt update
 RUN apt install -y python-pip python3-dev default-libmysqlclient-dev
-RUN apt install -y wkhtmltopdf
 COPY . .
 RUN pip install virtualenv
 RUN python3 -m venv myvenv
