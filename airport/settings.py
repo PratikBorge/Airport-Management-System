@@ -85,10 +85,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'airportdb',
-        'USER': 'airportuser',
-        'PASSWORD': 'Password@0',
-        'HOST': 'localhost',
-        'PORT': '',
+        'USER': 'root',
+        'PASSWORD': '1234',
+        'HOST': '172.17.0.2',
+        'PORT': '3306',
     }
 }
 
