@@ -14,7 +14,8 @@ RUN pip install --upgrade pip setuptools
 RUN pip install -r requirements.txt
 RUN pip install --no-binary :all: cffi
 WORKDIR /~/Airport_Management-System
-EXPOSE 8000
+
 RUN python manage.py makemigrations
 RUN python manage.py migrate 
+EXPOSE 8000
 CMD python manage.py runserver
