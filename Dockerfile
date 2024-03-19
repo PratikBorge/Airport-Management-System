@@ -9,7 +9,7 @@ RUN pip install virtualenv
 RUN apt install -y python3.10-venv
 RUN python3 -m venv myvenv
 RUN . myvenv/bin/activate
-RUN apt-get install -y build-essential libjpeg-dev libtiff-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev
+RUN apt-get install -y build-essential python3-dev libjpeg-dev libtiff-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev
 RUN pip install --upgrade pip setuptools
 RUN pip install -r requirements.txt
 EXPOSE 8000
