@@ -2,7 +2,7 @@ FROM centos:7
 LABEL engg="pratik"
 
 USER root
-RUN yum update
+
 RUN yum install python-pip python-dev mysql-server libmysqlclient-dev
 RUN yum install wkhtmltopdf
 COPY . .
