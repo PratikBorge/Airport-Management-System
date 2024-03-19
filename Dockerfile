@@ -6,6 +6,7 @@ RUN apt update
 RUN apt install -y python3-pip python3-dev default-libmysqlclient-dev
 COPY . .
 RUN pip install virtualenv
+RUN apt install python3.10-venv
 RUN python3 -m venv myvenv
 RUN source myvenv/bin/activate
 RUN pip install -r requirements.txt
