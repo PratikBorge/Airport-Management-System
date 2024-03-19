@@ -1,10 +1,10 @@
-FROM centos:7 
+FROM ubuntu:22.04
 LABEL engg="pratik"
 
 USER root
-
-RUN yum install python-pip python-dev mysql-server libmysqlclient-dev
-RUN yum install wkhtmltopdf
+RUN apt update
+RUN apt install python-pip python-dev mysql-server libmysqlclient-dev
+RUN apt install wkhtmltopdf
 COPY . .
 RUN pip install virtualenv
 RUN python3 -m venv myvenv
