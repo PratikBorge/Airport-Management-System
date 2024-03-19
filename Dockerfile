@@ -3,7 +3,7 @@ LABEL engg="pratik"
 
 USER root
 RUN apt update
-RUN apt install python-pip python3-dev mysql-server libmysqlclient-dev
+RUN apt install -y python-pip python3-dev mysql-server libmysqlclient-dev
 RUN apt install wkhtmltopdf
 COPY . .
 RUN pip install virtualenv
