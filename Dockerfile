@@ -2,9 +2,9 @@ FROM centos:7
 LABEL engg="pratik"
 
 USER root
-RUN apt-get update
-RUN apt-get install python-pip python-dev mysql-server libmysqlclient-dev
-RUN apt-get install wkhtmltopdf
+RUN yum update
+RUN yum install python-pip python-dev mysql-server libmysqlclient-dev
+RUN yum install wkhtmltopdf
 COPY . .
 RUN pip install virtualenv
 RUN python3 -m venv myvenv
