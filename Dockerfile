@@ -28,6 +28,6 @@ COPY . .
 
 # Install project dependencies
 RUN /opt/myvenv/bin/pip install -r requirements.txt
-
+RUN pip install --no-binary :all: cffi
 EXPOSE 8000
 CMD ["/opt/myvenv/bin/python", "manage.py", "runserver", "0.0.0.0:8000"]
