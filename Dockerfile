@@ -3,7 +3,7 @@ LABEL engg="pratik"
 
 USER root
 RUN apt update
-RUN apt install -y python-pip python3-dev default-libmysqlclient-dev
+RUN apt install -y python3-pip python3-dev default-libmysqlclient-dev
 COPY . .
 RUN python-pip install virtualenv
 RUN python3 -m venv myvenv
